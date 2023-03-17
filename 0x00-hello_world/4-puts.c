@@ -1,8 +1,7 @@
 #include <stdio.h>
 /**
  * main -this function prints a string using puts
- *
- * Return: Always 0;
+ * Return: Always 0.
  */
 int main(void)
 {
