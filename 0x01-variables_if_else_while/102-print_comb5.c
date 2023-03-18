@@ -20,8 +20,6 @@ int main(void)
 	putchar(' ');
 	putchar((q / 10) + '0');
 	putchar((q % 10) + '0');
-	if (p == 98 && q == 98)
-	continue;
 	putchar(',');
 	putchar(' ');
 	}
