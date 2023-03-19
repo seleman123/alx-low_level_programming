@@ -1,23 +1,33 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 /**
  * main - Entry point
- *
  * Return: Always 0 (Success)
  */
+
+
+/* betty style doc for function main goes there */
 int main(void)
 {
-	int i, j;
+	int num;
+	int n;
 
-	for (i = 0; i < 100; i++)
+	for (num = 0; num <= 98; num++)
 	{
 
-	for (j = i; j < 100; j++)
+	for (n = num + 1; n <= 99; n++)
 	{
-	putchar(i / 10 + '0');
-	putchar(i % 10 + '0');
+
+	putchar(num / 10 + '0');
+	putchar(num % 10 + '0');
 	putchar(' ');
-	putchar(j / 10 + '0');
-	putchar(j % 10 + '0');
+	putchar(n / 10 + '0');
+	putchar(n % 10 + '0');
+	if (num == 98 && n == 99)
+	{
+	continue;
+	}
 	putchar(',');
 	putchar(' ');
 	}
