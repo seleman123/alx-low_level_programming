@@ -1,24 +1,31 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+
 /**
- * main - generates keygen.
- * Return: 0 Always.
+ * main - generate rnandom password
+ *Description: generate rnandom password
+ * Return: A integer
  */
+
 int main(void)
 {
-	int r = 0, c = 0;
-	time_t t;
+int counter = 0;
+srandom(time(NULL));
+char randChar;
 
-	srand((unsigned int) time(&t));
-	while (c < 2772)
-	{
-		r = rand() % 128;
-		if ((c + r) > 2772)
-			break;
-		c = c + r;
-		printf("%c", r);
-	}
-	printf("%c\n", (2772 - c));
-	return (0);
+int  passwordLength;
+
+printf("Type in a password Length \n");
+scanf("%d", &passwordLength);
+
+while (counter < passwordLength)
+{
+randChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZa
+	bcdefghijklmnopqrstuvwxyz0123456789"[random() % 62];
+printf("%c", randChar);
+counter++;
+}
+printf("\n");
+return (0);
 }
