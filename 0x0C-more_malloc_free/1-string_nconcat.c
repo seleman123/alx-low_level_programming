@@ -2,13 +2,14 @@
 #include <stdlib.h>
 
 /**
-  * string_nconcat - ...
-  * @s1: ...
-  * @s2: ...
-  * @n: ...
-  *
-  * Return: ...
+  * string_nconcat - concatenates two strings
+  * @s1: char
+  * @s2: char
+  * @n: unsigned int
+  * Description: concatenates two strings
+  * Return: if the function fails, it returns NULL
   */
+
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i = 0, j = 0, k = 0, l = 0;
