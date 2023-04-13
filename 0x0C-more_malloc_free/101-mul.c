@@ -3,13 +3,11 @@
 #include <stdio.h>
 
 /**
-  * _realloc - reallocates a memory block using malloc and free
-  * @ptr: void
-  * @old_size: unsigned int
-  * @new_size: unsigned int
-  * Description: reallocates memory block using malloc and free
-  * Return: If new_size == old_size return ptr
-  */
+ * main - multiplies two positive numbers
+ * @argc: n arguments
+ * @argv: args
+ * Return: int
+ */
 
 int main(int argc, char *argv[])
 {
