@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
-
 /**
- * main - multiplies two positive numbers
- * @argc: n arguments
- * @argv: args
- * Return: int
+ * main - multiplies two positive numbers.
+ * @argc: number of arguments
+ * @argv: array of passed arguments
+ * Description: multiplies two positive numbers.
+ * Return: Nothing
  */
 
 int is_valid_number(char *num)
