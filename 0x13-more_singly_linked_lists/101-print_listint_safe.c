@@ -6,24 +6,44 @@
  *
  * Return: the number of nodes in the list
  */
-size_t print_listint_safe(const listint_t *head)
-{
-	size_t m = 0;
-	long int diff;
 
-	while (head)
+size_t looped_listint_len(const listint_t *head)
+{
+	const listint_t *tortoise, *hare;
+	size_t nodes = 1;
+
+	if (head == NULL || head->next == NULL)
+		return (0);
+
+	tortoise = head->next;
+	hare = (head->next)->next;
+
+	while (hare)
 	{
-		diff = head - head->next;
-		m++;
-		printf("[%p] %d\n", (void *)head, head->n);
-		if (diff > 0)
-			head = head->next;
-		else
+		if (tortoise == hare)
 		{
-			printf("-> [%p] %d\n", (void *)head->next, head->next->n);
-			break;
+			tortoise = head;
+			while (tortoise != hare)
+			{
+				nodes++;
+				tortoise = tortoise->next;
+				hare = hare->next;
+			}
+
+			tortoise = tortoise->next;
+			while (tortoise != hare)
+			{
+				nodes++;
+				tortoise = tortoise->next;
+			}
+
+			return (nodes);
 		}
+
+		tortoise = tortoise->next;
+		hare = (hare->next)->next;
 	}
 
-	return (m);
+	return (0);
 }
+
