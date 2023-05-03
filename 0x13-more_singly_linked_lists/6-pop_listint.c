@@ -6,19 +6,20 @@
 * @head: a pointer to the head of the list
 * Return: returns 0 if the linked list is empty
 */
+
 int pop_listint(listint_t **head)
 {
-	int p;
+	listint_t *temp;
+	int num;
 
-	listint_t *ptr;
-
-	if (*head == NULL)
+	if (!head || !*head)
 		return (0);
 
-	ptr = *head;
-	p = (*head)->p;
-	*head = (*head)->next;
-	free(ptr);
+	num = (*head)->n;
+	temp = (*head)->next;
+	free(*head);
+	*head = temp;
 
-	return (p);
+	return (num);
 }
+
