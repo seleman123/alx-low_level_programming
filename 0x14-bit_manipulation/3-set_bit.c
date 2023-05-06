@@ -8,15 +8,16 @@
  *
  * Return: 1 if it wored, or -1 if an error occurred
  */
+
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned int p;
+	unsigned int m;
 
 	if (index > 63)
 		return (-1);
 
-	p = 1 << index;
-	*= (*n | p);
+	m = 1 << index;
+	*n = (*n | m);
 
 	return (1);
 }
